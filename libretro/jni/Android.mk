@@ -25,6 +25,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := retro
 LOCAL_SRC_FILES := $(SOURCES_C)
 LOCAL_CFLAGS    := $(COREFLAGS)
-LOCAL_LDFLAGS   := -Wl,-version-script=$(LIBRETRO_DIR)/link.T
+LOCAL_LDFLAGS   := -Wl,-version-script=$(LIBRETRO_DIR)/link.T,-z,max-page-size=16384
 LOCAL_ARM_MODE  := arm
 include $(BUILD_SHARED_LIBRARY)
